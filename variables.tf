@@ -56,13 +56,13 @@ variable "map_customer_owned_ip_on_launch" {
 variable "customer_owned_ipv4_pool" {
   description = "The customer owned IPv4 address pool. Typically used with the map_customer_owned_ip_on_launch argument"
   type        = string
-  default     = null
+  default     = ""
 }
 
 variable "outpost_arn" {
   description = "The Amazon Resource Name (ARN) of the Outpost"
   type        = string
-  default     = null
+  default     = ""
 }
 
 variable "create_nat_gateways" {
