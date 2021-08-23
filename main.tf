@@ -87,6 +87,8 @@ resource "aws_subnet" "public" {
   availability_zone               = element(local.azs, count.index)
   map_public_ip_on_launch         = var.map_public_ip_on_launch
   map_customer_owned_ip_on_launch = var.map_customer_owned_ip_on_launch
+  customer_owned_ipv4_pool        = var.customer_owned_ipv4_pool
+  outpost_arn                     = var.outpost_arn
   assign_ipv6_address_on_creation = true
 
   tags = merge(

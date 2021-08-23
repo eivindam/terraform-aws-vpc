@@ -53,11 +53,24 @@ variable "map_customer_owned_ip_on_launch" {
   default     = false
 }
 
+variable "customer_owned_ipv4_pool" {
+  description = "The customer owned IPv4 address pool. Typically used with the map_customer_owned_ip_on_launch argument"
+  type        = string
+  default     = null
+}
+
+variable "outpost_arn" {
+  description = "The Amazon Resource Name (ARN) of the Outpost"
+  type        = string
+  default     = null
+}
+
 variable "create_nat_gateways" {
   description = "Optionally create NAT gateways (which cost $) to provide internet connectivity to the private subnets."
   type        = bool
   default     = true
 }
+
 
 variable "enable_dns_hostnames" {
   description = "A boolean flag to enable/disable DNS hostnames in the VPC."
